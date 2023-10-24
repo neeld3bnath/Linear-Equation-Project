@@ -8,14 +8,14 @@ class Main {
         String coor1 = scan.nextLine();
         System.out.println("Enter coordinate 2: ");
         String coor2 = scan.nextLine();
-        String point1F = coor1.substring(1, coor1.length() - 1);
-        String point2F = coor2.substring(1, coor2.length() - 1);
-        point1F = point1F.replace(" ", "");
-        point2F = point2F.replace(" ", "");
-        int x1 = Integer.parseInt(point1F.split(",")[0]);
-        int y1 = Integer.parseInt(point1F.split(",")[1]);
-        int x2 = Integer.parseInt(point2F.split(",")[0]);
-        int y2 = Integer.parseInt(point2F.split(",")[1]);
+        String point1 = coor1.substring(1, coor1.length() - 1);
+        String point2 = coor2.substring(1, coor2.length() - 1);
+        point1 = point1.replace(" ", "");
+        point2 = point2.replace(" ", "");
+        int x1 = Integer.parseInt(point1.split(",")[0]);
+        int y1 = Integer.parseInt(point1.split(",")[1]);
+        int x2 = Integer.parseInt(point2.split(",")[0]);
+        int y2 = Integer.parseInt(point2.split(",")[1]);
         LinearEquation line = new LinearEquation(x1, y1, x2, y2);
         System.out.println(line.lineInfo());
 
