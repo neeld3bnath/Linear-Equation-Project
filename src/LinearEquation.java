@@ -96,6 +96,8 @@ public class LinearEquation {
         } else {
             if (slope() == 1) {
                 equation += "x";
+            } else if (x2 - x1 < 0 && y2 - y1 < 0) {
+                equation += String.format("%s/%s", Math.abs(y2 - y1), Math.abs(x2 - x1));
             } else if ((x2 - x1 == y2 - y1) || ((y2 - y1) % (x2 - x1)) == 0) {
                 equation += String.format("%s", ((y2 - y1) / (x2 - x1))) + "x";
             } else {

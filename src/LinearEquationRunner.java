@@ -22,7 +22,6 @@ class Main {
         System.out.println("Enter a value for x: ");
         double xValue = scan.nextDouble();
         scan.close();
-        System.out.println(line.coordinateForX(xValue));
-        System.out.println();
+        System.out.printf("\nCoordinate for x: %s", line.coordinateForX(xValue));
     }
 }
