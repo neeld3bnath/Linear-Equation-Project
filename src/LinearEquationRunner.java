@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class LinearEquationRunner {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome!");
@@ -16,12 +16,16 @@ class Main {
         int y1 = Integer.parseInt(point1.split(",")[1]);
         int x2 = Integer.parseInt(point2.split(",")[0]);
         int y2 = Integer.parseInt(point2.split(",")[1]);
-        LinearEquation line = new LinearEquation(x1, y1, x2, y2);
-        System.out.println(line.lineInfo());
+        if (x1 != x2) {
+            LinearEquation line = new LinearEquation(x1, y1, x2, y2);
+            System.out.println(line.lineInfo());  
 
-        System.out.println("Enter a value for x: ");
-        double xValue = scan.nextDouble();
-        scan.close();
-        System.out.printf("\nCoordinate for x: %s", line.coordinateForX(xValue));
+            System.out.println("Enter a value for x: ");
+            double xValue = scan.nextDouble();
+            scan.close();
+            System.out.printf("\nCoordinate for x: %s", line.coordinateForX(xValue));
+        } else {
+            System.out.println("x1 and x2 cannot be the same!");
+        }
     }
 }
