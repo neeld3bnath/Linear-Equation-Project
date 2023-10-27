@@ -25,7 +25,7 @@ class LinearEquationRunner {
             scan.close();
             System.out.printf("\nCoordinate for x: %s", line.coordinateForX(xValue));
         } else {
-            System.out.println("x1 and x2 cannot be the same!");
+            System.out.println("x1 and x2 cannot be the same! They are on a vertical line.");
         }
     }
 }
